@@ -41,20 +41,7 @@
 <?php 
 $directory = 'photos/panorami/';
 
-	// Styling for images	
-	echo '<div class="gallery-thumbnail">';	
-	foreach ( new DirectoryIterator($directory) as $item ) {			
-		if ($item->isFile()) {
-			$riginalPath = $directory . $item .;	
-			$thumbPath = $directory . $item . ;
-			echo '<a href="' .  .'" data-lightbox="image-1" title="">
-                  <img src="'. .'" width="450" height="130" />
-                  </a>';	
-		}
-	}	
-	echo '</div>';
-	
-                        <div class="gallery-thumbnail">
+	                    <div class="gallery-thumbnail">
                             <a href="photos/panorami/original/2.jpg" data-lightbox="image-1" title="">
                                 <img src="photos/panorami/thumb/2.jpg" width="450" height="130" />
                             </a>
