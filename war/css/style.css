@@ -389,6 +389,13 @@
     text-align: center;
     margin:0;
 }
+.body ul li div.featured button{
+    background:url(../images/interface.jpg) no-repeat 0 -68px;
+    width:281px;
+    height:267px;
+    text-align: center;
+    margin:0;
+}
 .body ul li div.featured img {
     margin:10px 0 0 -3px;
     border:0;
