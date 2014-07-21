@@ -28,6 +28,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>GestoreAvvisi</servlet-name>
 		<url-pattern>/admin/gestoreAvvisi</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminaAvvisi</servlet-name>
+		<servlet-class>com.cyberteo.rifugiobrunone.EliminaAvvisiServlet</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>EliminaAvvisi</servlet-name>
+		<url-pattern>/admin/eliminaAvvisi</url-pattern>
+	</servlet-mapping>
 	
 	<security-constraint>
         <web-resource-collection>

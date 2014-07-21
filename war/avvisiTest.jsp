@@ -12,7 +12,6 @@
 
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="java.util.logging.*" %>
 
 
 <html>
@@ -59,25 +58,42 @@
                    
                    <%
 				    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-				    //Key guestbookKey = KeyFactory.createKey("Guestbook", guestbookName);
 				    Query query = new Query("Notice").addSort("date", Query.SortDirection.DESCENDING);
 				    PreparedQuery pq = datastore.prepare(query);
 				    //Check if there are no notices
 				    if (pq.countEntities()==0) out.println("<p>Al momento non sono presenti avvisi.</p>");
 				    
+				    //One cycle to get important notices, showed on top
+				    for (Entity notice : pq.asIterable()) {
+				    	  String title = (String) notice.getProperty("title");
+				    	  String priority = (String) notice.getProperty("important");
+				    	  if (priority!=null) {
+				    		  out.println("<h1>" + title + "</h1>");
+				    		  if (notice.getProperty("text") instanceof Text) {
+						    	  Text text = (Text) notice.getProperty("text");
+						    	  out.println("<p>" + text.getValue() + "</p>"); 
+					    	  } else {
+					    	      String text = (String) notice.getProperty("text");
+						    	  out.println("<p>" + text + "</p>"); 
+					    	  }
+				    	  }
+				    }
+				    
+				    //Another cycle for not important notices
 				    for (Entity notice : pq.asIterable()) {
 				    	  String title = (String) notice.getProperty("title");
 				    	  String priority = (String) notice.getProperty("important");
 				    	  //If notice is important use a bigger character
-				    	  if (priority!=null) out.println("<h1>" + title + "</h1>");
-				    	  else out.println("<h2>" + title + "</h2>"); 
-				    	  Date date = (Date) notice.getProperty("date");
-				    	  if (notice.getProperty("text") instanceof Text) {
-					    	  Text text = (Text) notice.getProperty("text");
-					    	  out.println("<p>" + text.getValue() + "</p>"); 
-				    	  } else {
-				    	      String text = (String) notice.getProperty("text");
-					    	  out.println("<p>" + text + "</p>"); 
+				    	  if (priority==null) {
+					    	  out.println("<h2>" + title + "</h2>"); 
+					    	  Date date = (Date) notice.getProperty("date");
+					    	  if (notice.getProperty("text") instanceof Text) {
+						    	  Text text = (Text) notice.getProperty("text");
+						    	  out.println("<p>" + text.getValue() + "</p>"); 
+					    	  } else {
+					    	      String text = (String) notice.getProperty("text");
+						    	  out.println("<p>" + text + "</p>"); 
+					    	  }
 				    	  }
 
 				    }

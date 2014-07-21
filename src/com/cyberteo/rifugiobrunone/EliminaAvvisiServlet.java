@@ -11,11 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Text;
 
-
 @SuppressWarnings("serial")
-public class GestoreAvvisiServlet extends HttpServlet {
+public class EliminaAvvisiServlet extends HttpServlet {
 	
 	 @Override
 	 public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -24,23 +26,18 @@ public class GestoreAvvisiServlet extends HttpServlet {
 	 
 	 @Override
 	 public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		 String noticeTitle = req.getParameter("title");
-		 Text noticeText = new Text(req.getParameter("text"));
-		 String importantNotice = req.getParameter("important");
-		 
-		 //Save notice on datastore
-		Entity notice = new Entity("Notice");
-	    notice.setProperty("title", noticeTitle);
-	    Date date = new Date();
-	    notice.setProperty("date", date);
-	    notice.setProperty("text", noticeText);
-	    if ("important".equals(importantNotice)) notice.setProperty("important", "isImportant");
-	    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-	    datastore.put(notice);	 
-		 
-	    //Redirect to correct page to show updates
-		req.getRequestDispatcher("/avvisiTest.jsp").forward(req, resp);
 
+		 //Delete notice from datastore
+		 DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+
+		 String[] noticesChecked = req.getParameterValues("selected");
+		 
+		 for (int i=0; i<noticesChecked.length; i++) {
+			 Key noticeKey = KeyFactory.stringToKey(noticesChecked[i]);
+			 datastore.delete(noticeKey);
+		 }
+		 
+		 req.getRequestDispatcher("/avvisiTest.jsp").forward(req, resp);
 	 }
 	 
 }
