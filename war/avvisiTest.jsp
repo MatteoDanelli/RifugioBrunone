@@ -1,4 +1,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//IT">
+<%@ page import="com.google.appengine.api.datastore.DatastoreService" %>
+<%@ page import="com.google.appengine.api.datastore.DatastoreServiceFactory" %>
+<%@ page import="com.google.appengine.api.datastore.Entity" %>
+<%@ page import="com.google.appengine.api.datastore.FetchOptions" %>
+<%@ page import="com.google.appengine.api.datastore.Key" %>
+<%@ page import="com.google.appengine.api.datastore.KeyFactory" %>
+<%@ page import="com.google.appengine.api.datastore.Query" %>
+<%@ page import="com.google.appengine.api.datastore.PreparedQuery" %>
+<%@ page import="com.google.appengine.api.datastore.Text" %>
+
+
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.logging.*" %>
+
+
 <html>
 
     <head>
@@ -35,61 +51,38 @@
                 </ul>
             </div>
 
-
             <div class="body">
                 <br>
                 <div class="news">
                     <div class="titolo">Avvisi</div>
-                   <!-- Avvisi Dinamici, creati dall'area Admin -->
-                   <% if (request.getAttribute("avvisoImportante").equals("true")) {
-                       out.println("<h1>" + request.getAttribute("titoloAvviso") + "</h1>"); 
-                   } else {
-                       out.println("<h3>" + request.getAttribute("titoloAvviso") + "</h3>"); 
-                   } %>
+                   <!-- Avvisi Dinamici, presenti nel Datastore e creati dall'area Admin -->
                    
-                   <% out.println("<p>" + request.getAttribute("testoAvviso") + "</p>"); %>
-                   
-                    <h1>APERTURA ANNO 2014</h1>	
-                    <p>Aperture nei fine settimana dal 01/06 al 15/06 e dal 20/09 al 12/10. <br> 
-                        Apertura continuativa dal 21/06 al 14/09.
-                    </p>
+                   <%
+				    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+				    //Key guestbookKey = KeyFactory.createKey("Guestbook", guestbookName);
+				    Query query = new Query("Notice").addSort("date", Query.SortDirection.DESCENDING);
+				    PreparedQuery pq = datastore.prepare(query);
+				    //Check if there are no notices
+				    if (pq.countEntities()==0) out.println("<p>Al momento non sono presenti avvisi.</p>");
+				    
+				    for (Entity notice : pq.asIterable()) {
+				    	  String title = (String) notice.getProperty("title");
+				    	  String priority = (String) notice.getProperty("important");
+				    	  //If notice is important use a bigger character
+				    	  if (priority!=null) out.println("<h1>" + title + "</h1>");
+				    	  else out.println("<h2>" + title + "</h2>"); 
+				    	  Date date = (Date) notice.getProperty("date");
+				    	  if (notice.getProperty("text") instanceof Text) {
+					    	  Text text = (Text) notice.getProperty("text");
+					    	  out.println("<p>" + text.getValue() + "</p>"); 
+				    	  } else {
+				    	      String text = (String) notice.getProperty("text");
+					    	  out.println("<p>" + text + "</p>"); 
+				    	  }
 
-					<h2>ATTENZIONE - SENTIERO N°227 FIUMENERO - RIFUGIO BRUNONE</h2>
-                    <p>Il sentiero che sale al rifugio presenta tre masse nevose lasciate 
-                       	da valanghe. Al di sotto di queste scorre acqua che sta scavando delle cavità. 
-                       	Esiste il rischio che la superficie possa cedere con conseguente caduta 
-                       	nel vuoto e nel torrente sottostante. <br>
-						Attualmente sono in corso delle verifiche e, in alcuni tratti, sono state 
-						realizzate delle deviazioni provvisorie per aggirare la neve. <br>
-						<font color="black"><b>IGNORARE tali deviazioni e attraversare la massa nevosa vuol dire rischiare la propria vita!</b>
-						<b>SEGUITE le deviazioni!!! </b> </font> <br>
-						Ulteriori informazioni qui:<a href="http://geoportale.caibergamo.it/"> Avviso CAI</a>						
-                    </p>
-                       	
-                    <h3>Riapertura CAI 330</h3>
-                    <p>Il sentiero CAI 330 (sentiero "basso") dal rifugio Coca, è stato riaperto. 
-                    	 Si ricorda che è adatto ad Escursionisti Esperti; 
-                    	 il tracciato e l'esposizione richiedono grande attenzione e non sono affrontabili da tutti. <br>
-                    </p>   
-                    
-                    <!-- Avvisi con immagini -->
-                    <h3>Preparazione della presa d'acqua - Situazione Inizio Giugno 2014</h3>       
-                    <div class="gallery-thumbnail-box">
-                        <div class="gallery-thumbnail">
-                            <a href="/photos/recent/original/1.jpg" data-lightbox="image-1" title="">
-                                <img src="/photos/recent/original/1.jpg" width="290" height="220" />
-                            </a>
-                        </div>
-                        <div class="gallery-thumbnail">
-                            <a href="/photos/recent/original/2.jpg" data-lightbox="image-1" title="">
-                                <img src="/photos/recent/original/2.jpg" width="290" height="220" />
-                            </a>
-                        </div>
-                        <div class="gallery-thumbnail">
-                            <a href="/photos/recent/original/3.jpg" data-lightbox="image-1" title="">
-                                <img src="/photos/recent/original/3.jpg" width="290" height="220" />
-                            </a>                                     
-                </div>
+				    }
+				    %>
+                   
 
                 <div class="footer">
                     <p>Copyright &copy; 2013 Matteo Danelli - All rights reserved</p>

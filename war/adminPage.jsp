@@ -24,7 +24,7 @@
 			<label>Testo: </label>
 			<input type="text" name="text">
 			<br>								
-			<input type="radio" name="important" value="important">Seleziona se l'avviso e' importante
+			<input type="checkbox" name="important" value="important">Seleziona se l'avviso e' importante
 			<br>
 			<input type="submit" value="Crea avviso">
 </form>
