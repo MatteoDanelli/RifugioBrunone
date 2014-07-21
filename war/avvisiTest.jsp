@@ -8,10 +8,9 @@
 <%@ page import="com.google.appengine.api.datastore.Query" %>
 <%@ page import="com.google.appengine.api.datastore.PreparedQuery" %>
 <%@ page import="com.google.appengine.api.datastore.Text" %>
-
-
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Date" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
 <html>

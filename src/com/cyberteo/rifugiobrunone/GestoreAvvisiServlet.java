@@ -1,6 +1,7 @@
 package com.cyberteo.rifugiobrunone;
 
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -24,6 +25,7 @@ public class GestoreAvvisiServlet extends HttpServlet {
 	 
 	 @Override
 	 public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		 
 		 String noticeTitle = req.getParameter("title");
 		 Text noticeText = new Text(req.getParameter("text"));
 		 String importantNotice = req.getParameter("important");

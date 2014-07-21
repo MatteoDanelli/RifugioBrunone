@@ -10,7 +10,7 @@
 <%@ page import="com.google.appengine.api.datastore.Query" %>
 <%@ page import="com.google.appengine.api.datastore.PreparedQuery" %>
 <%@ page import="com.google.appengine.api.datastore.Text" %>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Date" %>
@@ -33,13 +33,13 @@
 	     		
 	     		<div class="body">
 	     <h2>Inserisci qui sotto il nuovo avviso:</h2>	     
-		<form class="form" action="gestoreAvvisi" method="post">
+		<form class="form" action="gestoreAvvisi" method="post"accept-charset="utf-8" >
 					<h3>Titolo: </h3> 
 					<textarea rows="1" cols="50" name="title"></textarea> 
 					<h3>Testo: </h3>
 					<textarea rows="10" cols="50" name="text"></textarea> <br>								
 					<input type="checkbox" name="important" value="important">
-						Seleziona se l'avviso e' importante [Verr� messo in cima alla lista]
+						Seleziona se l'avviso è importante [Verrà messo in cima alla lista]
 					<p><input type="submit" value="Crea avviso">
 					</p>			
 		</form>
