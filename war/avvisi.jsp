@@ -12,7 +12,6 @@
 <%@ page import="java.util.Date" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-
 <html>
 
     <head>
@@ -100,7 +99,7 @@
                    
 
                 <div class="footer">
-                    <p>Copyright &copy; 2013 Matteo Danelli - All rights reserved</p>
+                    <p>Copyright &copy; 2013-2015 Matteo Danelli, Massimiliano Tebaldi - All rights reserved</a></p>
                     <div class="connect">
                          <a href="http://www.facebook.com/sharer.php?u=http://www.rifugiobrunone.it" id="facebook">facebook</a> 
                         	<a href="http://twitter.com/home?status=Visita%20il%20sito%20del%20Rifugio%20Brunone!%20www.rifugiobrunone.it" id="twitter">twitter</a> 
