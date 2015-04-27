@@ -37,7 +37,7 @@ public class EliminaAvvisiServlet extends HttpServlet {
 			 datastore.delete(noticeKey);
 		 }
 		 
-		 req.getRequestDispatcher("/avvisiTest.jsp").forward(req, resp);
+		 req.getRequestDispatcher("/avvisi.jsp").forward(req, resp);
 	 }
 	 
 }

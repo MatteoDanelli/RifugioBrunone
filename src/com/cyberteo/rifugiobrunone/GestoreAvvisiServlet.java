@@ -41,7 +41,7 @@ public class GestoreAvvisiServlet extends HttpServlet {
 	    datastore.put(notice);	 
 		 
 	    //Redirect to correct page to show updates
-		req.getRequestDispatcher("/avvisiTest.jsp").forward(req, resp);
+		req.getRequestDispatcher("/avvisi.jsp").forward(req, resp);
 
 	 }
 	 
