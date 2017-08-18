@@ -1,0 +1,1877 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+html {
+    background: #fff;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+    color: #808080;
+    font-family: 'Lato', sans-serif;
+}
+
+red {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.none {
+    display: none;
+}
+
+a,
+a:active,
+a:visited {
+    color: #5a5a53;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2670d0;
+}
+
+img {
+    border: none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a.generic_button {
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    line-height: 36px;
+    margin: 10px 0;
+    padding: 0 20px;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+a.generic_button:hover {
+    background: #7F7777;
+    color: #fff;
+}
+
+.off_gallery {
+    margin: 80px 0px 80px 0px;
+    padding-top: 40px;
+    border-top: 1px dotted #ccc;
+    display: block;
+    text-align: left:
+}
+
+.off_gallery img {
+    float: left;
+    width: 200px;
+    margin: 5px;
+    display: block;
+}
+
+.off_gallery img:hover {
+    opacity: 0.8
+}
+
+
+/************ header ************/
+
+#header {
+    height: 100px;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 50px 120px #000;
+}
+
+.fixed #header {
+    height: 60px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.fixed #lingue {
+    font-size: 14px;
+}
+
+#lingue {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-transform: uppercase;
+    z-index: 1003;
+}
+
+#lingue a {
+    margin: 0 5px;
+}
+
+
+/*#ombra_slider_mappa{height:130px;background:url(../img/layout/ombra.png);background-size:auto 100%;background-repeat:repeat-x;position:absolute;top:100%;left:0;width:100%;}
+	.fixed #ombra_slider_mappa{height:100px;}*/
+
+#logo {
+    text-align: center;
+    height: 100px;
+    position: relative;
+    z-index: 1001;
+}
+
+.fixed #logo {
+    height: 60px;
+}
+
+#logo a {
+    height: 185px;
+    margin-top: 5px;
+}
+
+#logo img {
+    height: 185px;
+    margin-top: 5px;
+}
+
+.fixed #logo img {
+    height: 108px;
+}
+
+#menu_e_buttons {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    margin-top: -25px;
+    top: 100%;
+    left: 0;
+    z-index: 1002;
+}
+
+#menu_e_buttons img {
+    height: 35px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+#menu {
+    position: absolute;
+    left: 0;
+}
+
+#switch {
+    position: absolute;
+    right: 0;
+}
+
+.voce {
+    position: relative;
+    background: #f2f0f0;
+    border-radius: 50px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 3px;
+    border: 2px solid #f2f0f0;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.voce.attiva {
+    border: 2px solid #f2f0f0;
+}
+
+.voce.attiva:before
+/*, .voce:hover:before, #menu:hover  .voce.attiva:hover:before*/
+
+{
+    border-color: #EF4036 transparent transparent;
+    border-style: solid;
+    border-width: 9px 4px;
+    position: absolute;
+    content: " ";
+    /*bottom: calc(100% - 4px);left: calc(50% - 4px);*/
+    top: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -15px;
+}
+
+
+/*#menu:hover  .voce.attiva:before{border-color: transparent;}*/
+
+.voce:hover {
+    border: 2px solid #ef4036;
+}
+
+.voce font {
+    top: 40px;
+    left: 3px;
+    display: none;
+    background: #7f7777;
+    color: #f2f0f0;
+    font-size: 16px;
+    line-height: 20px;
+    position: fixed;
+    text-align: center;
+    width: 310px;
+    opacity: 0;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.voce font span {
+    font-weight: bold;
+}
+
+.fixed .voce font {
+    top: 1px;
+}
+
+.voce:hover font {
+    display: none;
+    opacity: 1;
+}
+
+#switch .voce {
+    background: #000;
+    border: 2px solid #000;
+    box-shadow: 1px 1px 3px rgba(207, 207, 207, 0.5);
+}
+
+.voce.attiva_switch:after {
+    border-color: transparent transparent #EF4036;
+    border-style: solid;
+    border-width: 9px 4px;
+    position: absolute;
+    top: calc(100% - 4px);
+    content: " ";
+    left: calc(50% - 4px);
+    /*bottom: 0;left: 50%;margin-left: -4px; margin-bottom: -15px;*/
+}
+
+#link_mappa_fixed {
+    overflow: hidden;
+    border-radius: 500px 0 0;
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    border: 2px solid #ef4036;
+    border-bottom: none;
+    border-right: none;
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 500px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#link_mappa_fixed img {
+    bottom: 0;
+    height: 30px;
+    position: absolute;
+    right: 0;
+}
+
+#link_top {
+    overflow: hidden;
+    border-radius: 0 500px 0 0;
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    border: 2px solid #ef4036;
+    border-bottom: none;
+    border-left: none;
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 0;
+    border-top-right-radius: 500px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#link_top img {
+    bottom: 0;
+    height: 30px;
+    position: absolute;
+    left: 0;
+}
+
+
+/************ filtro  ************/
+
+#filtro_container {
+    margin-bottom: 20px;
+    border: 2px solid #efefef;
+}
+
+#filtro_titolo {
+    cursor: pointer;
+    background: #E74C3C;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: left;
+    position: relative;
+    color: #ffffff;
+}
+
+#filtro_titolo>div {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 40px;
+    color: #ffffff;
+    line-height: 40px;
+}
+
+#filtro_titolo>img {
+    height: 30px;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+#filtro_check_list {
+    padding: 0 10px;
+    display: none;
+}
+
+.filtro_titolo_group {
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.filtro_check_group {
+    border-bottom: 2px dotted #efefef;
+    font-size: 14px;
+    padding: 10px;
+    text-align: left;
+}
+
+.filtro_check_item {
+    background: #efefef;
+    display: inline-block;
+    margin: 3px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+
+.filtro_check_item label {
+    padding: 3px 10px;
+    display: block;
+}
+
+.filtro_check_item.tutti {
+    background: #BFB9B9;
+    color: #fff;
+}
+
+.filtro_check_item.selected,
+.filtro_check_item.tutti.selected {
+    background: #EF4036;
+    color: #fff;
+}
+
+.field_img {
+    width: 15px;
+    vertical-align: middle;
+}
+
+
+/************ slider principale e/o mappa ************/
+
+#slider_mappa {
+    background: #ddd;
+    position: relative;
+    margin-top: 100px;
+}
+
+.fixed #slider_mappa {
+    margin-top: 80px;
+}
+
+#mappa_rifugi {
+    width: 100%;
+    overflow: hidden;
+}
+
+#mappa_rifugi img {
+    width: 100%;
+}
+
+#slider_principale {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+#slider_principale img {
+    width: 100%;
+    opacity: 0;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.swiper-button-next {
+    display: none;
+    background: image: url(../img/layout/slider_next.png);
+    background-size: contain;
+}
+
+.swiper-button-prev {
+    display: none;
+    background: image: url(../img/layout/slider_next.png);
+    background-size: contain;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    height: 20px;
+    opacity: 0.5;
+    width: 20px;
+    box-shadow: 0 0 3px #000 inset;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+    opacity: 0.8;
+}
+
+#mappa_principale {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    z-index: 10;
+    -webkit-animation: effetto_mappa 5s;
+    animation: effetto_mappa 5s;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+#mappa_principale.disattiva {
+    height: 0px !important;
+    margin-top: 0 !important;
+    opacity: 0;
+}
+
+
+/*#mappa_principale img{width:100%;opacity:0;}*/
+
+
+/************ contenuto ************/
+
+#contenuto {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px 0;
+    width: 90%;
+}
+
+#contenuto_top {
+    padding: 0px 0 20px;
+}
+
+.titolo {
+    font-size: 36px;
+    color: #333;
+}
+
+.sotto_titolo {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contenuto_testo {
+    overflow: auto;
+    text-align: justify;
+}
+
+.contenuto_left {
+    float: left;
+    width: 62%;
+    border-right: 1px solid #ddd;
+    padding-right: 3%;
+}
+
+.contenuto_right {
+    float: right;
+    width: 33%;
+}
+
+.contenuto_dettagli {
+    color: #7F7777;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 0 0 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.contenuto_dettagli a,
+.contenuto_dettagli a:visited {
+    color: #7F7777;
+}
+
+.contenuto_dettagli a:hover {
+    color: #CD372E;
+}
+
+.contenuto_dettagli>div {
+    padding: 5px 0 5px 30px;
+    position: relative;
+}
+
+.contenuto_dettagli>div img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 3px;
+    left: 0px;
+}
+
+.contenuto_dettagli>.altri_servizi {
+    background: transparent;
+    display: block;
+    font-size: 0.8em;
+    line-height: 20px;
+    padding: 5px 0;
+}
+
+.altri_servizi>p {
+    margin: 0;
+}
+
+.service_right_tab_title {
+    background: #cd372e;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    left: 0px;
+    margin-bottom: 5px;
+}
+
+.contenuto_escursioni {
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+a.escursioni_rifugio {
+    background: #cd372e;
+    color: #fff;
+    display: block;
+    padding: 3px 20px 3px 10px;
+    margin-bottom: 5px;
+}
+
+a.escursioni_rifugio:hover {
+    opacity: 0.8;
+}
+
+a.escursioni_rifugio img {
+    display: inline-block;
+    position: relative;
+    left: auto;
+    top: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+a.escursioni_rifugio h3 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.link_escursione_dx {
+    display: block;
+    font-size: 14px;
+    padding: 5px 0 5px 20px;
+    position: relative;
+}
+
+.link_escursione_dx:before {
+    border-color: transparent transparent transparent #EF4036;
+    border-style: solid;
+    border-width: 4px 9px;
+    position: absolute;
+    content: " ";
+    top: 50%;
+    left: 0%;
+    margin-top: -5px;
+}
+
+
+/*mape accessi*/
+
+.mappe_accessi {
+    font-size: 14px;
+}
+
+.mappe_accessi>div:not(#mappa_accesso):not(#elevation_chart_accesso) {
+    border: 1px solid #aaa;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    width: 30%;
+    opacity: 0.8;
+}
+
+.mappe_accessi>div:not(#mappa_accesso):not(#elevation_chart_accesso):hover,
+.mappe_accessi>div:not(#mappa_accesso):not(#elevation_chart_accesso).attivo {
+    opacity: 1;
+    background: #F2F0F0;
+    border: 1px solid #111;
+}
+
+.fbox_iframe {}
+
+.mappa_title {
+    font-weight: bold;
+}
+
+.mappe_accessi a {
+    display: inline-block;
+    min-width: 30%;
+    padding: 2px 3% 2px 2px;
+    cursor: pointer;
+}
+
+.mappe_accessi a:hover {
+    color: #000;
+}
+
+.mappe_accessi img {
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+#mappa_accesso {
+    height: 0px;
+    width: 100%;
+}
+
+#mappa_accesso.attiva {
+    height: 400px;
+}
+
+#elevation_chart_accesso {
+    height: 0px;
+    width: 100%;
+}
+
+#elevation_chart_accesso.attiva {
+    height: 150px;
+}
+
+
+/************ elenco rifugi nel content ************/
+
+#elenco_rifugi_content {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.link_rifugio {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    position: relative;
+    margin: 10px 0;
+    text-align: left;
+    border: 3px solid transparent;
+}
+
+.link_rifugio b {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.link_rifugio.attivo {
+    -webkit-animation: evidenzia_link_rifugio 3s;
+    animation: evidenzia_link_rifugio 3s;
+}
+
+.link_rifugio>a {
+    display: table;
+    overflow: auto;
+    width: 100%;
+    box-shadow: 1px 1px 2px rgba(41, 41, 41, 0.5);
+    background: #F2F0F0;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.link_rifugio>a:hover {
+    background: #C6352D;
+    color: #fff;
+}
+
+.ancora_link_rifugio {
+    position: absolute;
+    top: -150px;
+    left: 0;
+}
+
+.link_rifugio a>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.link_rifugio a>div.left {
+    width: 40%;
+}
+
+.link_rifugio a>div.right {
+    width: 60%;
+}
+
+.link_rifugio a>div>img {
+    width: 90%;
+}
+
+.img_serv {
+    width: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.img_serv img {
+    background: #fff;
+    border-radius: 50px;
+    display: none;
+    margin: 2px;
+    padding: 3px;
+    width: 18px;
+}
+
+.img_serv.serv_active_y img {
+    display: block;
+}
+
+.oc_image {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 12px!important;
+    height: 12px;
+}
+
+.map_letter_open {
+    display: inline-block;
+    width: 25px;
+    line-height: 25px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background: #62C848;
+}
+
+.map_letter_closed {
+    display: inline-block;
+    width: 25px;
+    line-height: 25px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background: #E74C3C;
+}
+
+.rif_list_nome {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+/************ elenco escursioni nel content ************/
+
+#elenco_escursioni_content {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.link_escursione {
+    display: inline-block;
+    margin: 2%;
+    position: relative;
+    vertical-align: top;
+    width: 28%;
+    max-width: 300px;
+}
+
+.link_escursione .top {
+    width: 100%;
+}
+
+.link_escursione .top>img {
+    width: 100%;
+}
+
+.link_escursione .middle {
+    background: #f2f0f0;
+    display: table;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.link_escursione:hover .middle {
+    background: #000;
+    color: #fff
+}
+
+.link_escursione .middle>div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 10px 5px;
+}
+
+.link_escursione .bottom {
+    background: #f2f0f0 none repeat scroll 0 0;
+    display: table;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+}
+
+.link_escursione .bottom>div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 3px 10px;
+}
+
+img.diff {
+    margin: 0 5px;
+    width: 26px;
+}
+
+img.diff.light {
+    opacity: 0.3;
+}
+
+.grade {
+    font-size: 13px;
+    text-align: left;
+    margin: 3px 1%;
+    padding: 1px 1%;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.grade>img {
+    margin-right: 3px;
+    width: 26px;
+    vertical-align: middle;
+}
+
+.info {
+    font-size: 13px;
+    text-align: left;
+    margin: 3px 1%;
+    padding: 1px 1%;
+    width: 44%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/*.info:hover {background: #FCFCFC;}*/
+
+.info>img {
+    margin-right: 3px;
+    width: 26px;
+    vertical-align: middle;
+}
+
+
+/************ elenco eventi ************/
+
+#elenco_eventi_content {
+    text-align: center;
+}
+
+.list_eventi {
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    margin: 10px 1%;
+    border-top: 3px solid #ef4037;
+}
+
+.list_eventi>img {
+    width: 100%;
+}
+
+.list_eventi_date {
+    color: #fff;
+    background: #000;
+    padding: 0 10px 0 20px;
+    line-height: 44px;
+    position: relative;
+}
+
+.list_eventi_date img {
+    height: 30px;
+    margin-right: 5px;
+    vertical-align: -8px;
+}
+
+.list_eventi_date:before {
+    border-color: transparent transparent transparent #ef4036;
+    border-style: solid;
+    border-width: 4px 9px;
+    bottom: calc(50% - 4px);
+    content: " ";
+    left: 5px;
+    position: absolute;
+}
+
+.list_eventi_tit {
+    background: #f2f0f0;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.list_eventi_text {
+    background: #f2f0f0;
+    border-bottom: 7px solid #000;
+    font-size: 0.8em;
+    padding: 5px 10px 10px;
+}
+
+
+/*** foto ***/
+
+#gallery_container {
+    text-align: center;
+}
+
+.album {
+    display: inline-block;
+    max-width: 30%;
+    margin: 30px 5px;
+    position: relative;
+}
+
+.album_titolo {
+    color: #0C4793;
+    font-size: 28px;
+    line-height: 40px;
+    margin: 20px 0 30px;
+    color: inherit;
+}
+
+.album .album_img {
+    position: relative;
+}
+
+.album .album_img img {
+    border: 8px solid #fff;
+    box-shadow: 1px 1px 5px rgba(51, 51, 51, 0.8);
+    max-width: 80%;
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.album .album_img img.behind {
+    position: absolute;
+    top: 0left: 0;
+    -webkit-transform: rotate(+3deg);
+    -ms-transform: rotate(+3deg);
+    transform: rotate(+3deg);
+}
+
+.album .album_img img.behind2 {
+    position: absolute;
+    top: 0left: 0;
+    -webkit-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+}
+
+.album .album_img:hover img,
+.album .album_img:hover img.behind,
+.album .album_img:hover img.behind2 {
+    box-shadow: 1px 1px 5px rgba(51, 51, 51, 0.3);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.gallery {
+    position: relative;
+}
+
+.back_album {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.gallery_titolo {
+    color: #0C4793;
+    font-family: 'Squada One', cursive;
+    font-size: 28px;
+    line-height: 40px;
+    margin: 10px 0 10px;
+}
+
+.gallery img {
+    margin: 100px;
+    max-width: 40%;
+    box-shadow: 1px 1px 5px rgba(51, 51, 51, 0.3);
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    transform: translateY(100px);
+    -webkit-animation: moveUp 500ms ease forwards;
+    -moz-animation: moveUp 500ms ease forwards;
+    animation: moveUp 500ms ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+    to {
+        -webkit-transform: translateY(0);
+        opacity: 1;
+        margin: 3px;
+    }
+}
+
+@-moz-keyframes moveUp {
+    to {
+        -moz-transform: translateY(0);
+        opacity: 1;
+        margin: 3px;
+    }
+}
+
+@keyframes moveUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        margin: 3px;
+    }
+}
+
+
+/************ box dei quattro argomenti ************/
+
+#boxes {}
+
+#boxes_top {
+    text-align: center;
+}
+
+#boxes_top img {
+    max-width: 80%;
+}
+
+#boxes_container {
+    background: #F2F0F0;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.box {
+    display: inline-block;
+    text-align: center;
+    width: 22%;
+    margin: 0 1%;
+    background: #ddd;
+    position: relative;
+    max-width: 400px;
+    border-bottom: 2px solid transparent;
+    vertical-align: top;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.box:hover {
+    border-bottom: 2px solid #ef4036;
+}
+
+.box>img {
+    max-width: 100%;
+}
+
+.box_bottom {
+    background: #000;
+    color: #fff;
+}
+
+.box_icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: -22px 0 0;
+    border: 2px solid #f2f0f0;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.box:hover .box_icon {
+    border: 2px solid #ef4036;
+    box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.8);
+}
+
+.box_icon img {
+    height: 28px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.box_title {
+    line-height: 50px;
+    height: 50px;
+    font-weight: bolder;
+}
+
+
+/************ elenco rifugi nel footer ************/
+
+#footer_elenco_rifugi {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7) inset;
+    text-align: center;
+    margin: 0 auto;
+    padding: 100px 0;
+    background: url(../img/layout/footer_elenco_rifugi_bg.jpg) no-repeat;
+    background-position: center 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    font-weight: bolder;
+}
+
+
+/*old*/
+
+#footer_elenco_rifugi>div {
+    max-width: 100%;
+    position: relative;
+}
+
+.box_elenco_rifugi {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 30%;
+    vertical-align: top;
+}
+
+.box_elenco_rifugi a {
+    position: relative;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0 0 0 20px;
+    margin: 2px auto;
+    line-height: 30px;
+    text-shadow: 1px 1px 1px #000;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.box_elenco_rifugi a:hover {
+    color: #7F7777;
+    background: #F2F0F0;
+    text-shadow: 1px 1px 1px transparent;
+}
+
+
+/*new*/
+
+#footer_elenco_rifugi>div.box_elenco_rifugi {
+    max-width: 90%;
+    position: relative;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 90%;
+    vertical-align: top;
+}
+
+#footer_elenco_rifugi>div.box_elenco_rifugi a {
+    text-align: left;
+    width: 30%;
+    vertical-align: top;
+    position: relative;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0 0 0 20px;
+    margin: 10px auto;
+    line-height: 30px;
+    text-shadow: 1px 1px 1px #000;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+#footer_elenco_rifugi>div.box_elenco_rifugi a:hover {
+    color: #7F7777;
+    background: #F2F0F0;
+    text-shadow: 1px 1px 1px transparent;
+}
+
+.box_elenco_rifugi a:before {
+    border-color: transparent transparent transparent #EF4036;
+    border-style: solid;
+    border-width: 4px 9px;
+    bottom: calc(50% - 4px);
+    content: " ";
+    left: 5px;
+    position: absolute;
+}
+
+
+/*social*/
+
+#social {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    /*width: 90%;max-width: 1000px;*/
+    background: #7F7777;
+    background: #000;
+    color: #fff;
+}
+
+#social a {
+    opacity: 1;
+    margin: 0 10px;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+#social a:hover {
+    opacity: 0.7;
+}
+
+
+/************ impressum ************/
+
+#impressum {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 30px 0;
+    width: 90%;
+    font-size: 16px;
+}
+
+
+/************ contenuto impressum ************/
+
+#impressum_left {
+    width: 45%;
+    float: left;
+    padding: 5px 2%;
+    background: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+#impressum_right {
+    width: 45%;
+    float: right;
+    padding: 5px 2%;
+    background: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+
+/************ elenco rifugi su mappa ************/
+
+#elenco_rifugi_mappa {
+    display: none;
+    border: 1px solid #ef4036;
+    border-radius: 3px;
+    left: 10px;
+    max-width: 280px;
+    padding: 0 0 10px;
+    position: absolute;
+    top: 90px;
+    width: 30%;
+}
+
+#elenco_rifugi_mappa a {
+    background: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin: 2px 10px;
+    padding: 3px 5px;
+    text-transform: capitalize;
+    display: none;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+#elenco_rifugi_mappa a b {
+    display: inline-block;
+    text-align: left;
+    width: 15px;
+}
+
+#elenco_rifugi_mappa a:hover,
+#elenco_rifugi_mappa a.hover {
+    color: #7F7777;
+    background: #F2F0F0;
+    background: #fff;
+}
+
+#open_close_elenco_rifugi_mappa {
+    background: #ef4036;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+}
+
+#open_close_elenco_rifugi_mappa:after {
+    background: #fff;
+    border-radius: 10px;
+    color: #ef4036;
+    content: "+";
+    font-size: 14px;
+    height: 20px;
+    line-height: 16px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 5px;
+    width: 20px;
+}
+
+.open #open_close_elenco_rifugi_mappa:after {
+    content: "x";
+    cursor: pointer;
+}
+
+#elenco_rifugi_mappa.open a {
+    display: block;
+}
+
+.close #open_close_elenco_rifugi_mappa:after {
+    content: "+";
+    cursor: pointer;
+}
+
+#elenco_rifugi_mappa.close {
+    overflow: hidden;
+    height: 21px;
+}
+
+
+/************ singolo rifugio ************/
+
+#foto_rifugio {
+    background: #e5e3df;
+    padding: 5px 0;
+    margin: 30px 0px 30px 0px;
+}
+
+#foto_rifugio a>img {
+    display: inline-block;
+    margin: 0 1%;
+    vertical-align: middle;
+    width: 17%;
+}
+
+#elenco_rifugi_mappa a.rifugio_attivo {
+    background: #c6352d;
+    color: #fff;
+    font-weight: bold;
+    -webkit-animation: effetto_rifugio_attivo 5s;
+    animation: effetto_rifugio_attivo 5s;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+.contenuto_right #foto_rifugio {
+    background: transparent;
+    text-align: left;
+}
+
+.contenuto_right #foto_rifugio a>img {
+    width: 30%;
+}
+
+a.contact_www,
+a.contact_www:link,
+a.contact_www:active,
+a.contact_www:visited {
+    padding: 2px 15px 2px 15px;
+    color: #ffffff;
+    background: #CD372E;
+    border: 2px solid #D75F58;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+a.contact_www:hover {
+    background: #D75F58;
+    border: 2px solid #CD372E;
+}
+
+
+/************ fancybox ************/
+
+.fancybox-skin {
+    border-radius: 0;
+}
+
+#fancybox-thumbs {
+    background: #000 none repeat scroll 0 0;
+    padding: 10px 0;
+}
+
+#fancybox-thumbs ul li {
+    opacity: 0.8;
+}
+
+#fancybox-thumbs ul li {
+    position: relative;
+    opacity: 0.8;
+}
+
+#fancybox-thumbs ul li.active {
+    opacity: 1;
+}
+
+#fancybox-thumbs ul li.active:before {
+    border-color: #ef4036 transparent transparent;
+    border-style: solid;
+    border-width: 9px 4px;
+    content: " ";
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -10px;
+    position: absolute;
+    top: 0;
+}
+
+@media screen and (max-width:950px) {
+    /************ header ************/
+    #menu_e_buttons {
+        text-align: right;
+    }
+    #menu,
+    #switch {
+        display: inline;
+        position: relative;
+        left: auto;
+    }
+    .voce font {
+        left: auto;
+        right: 128px;
+    }
+    #logo {
+        text-align: left;
+        margin-left: 10px;
+    }
+    #lingue {
+        font-size: 14px;
+        left: auto;
+        right: 10px;
+    }
+    /************ elenco rifugi nel content ************/
+    .link_rifugio {
+        width: 90%;
+    }
+    /************ elenco escursioni nel content ************/
+    .link_escursione {
+        width: 44%;
+    }
+    .link_escursione .middle {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:870px) {
+    /************ elenco rifugi nel footer ************/
+    #footer_elenco_rifugi {
+        background-attachment: unset;
+    }
+    /*old*/
+    .box_elenco_rifugi {
+        width: 90%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+    /*new*/
+    #footer_elenco_rifugi>div.box_elenco_rifugi a {
+        width: 45%;
+    }
+    .box {
+        width: 40%;
+        margin: 2%;
+    }
+    /************ contenuto ************/
+    .contenuto_right,
+    .contenuto_left {
+        float: none;
+        width: auto;
+        border: none;
+        clear: both;
+    }
+    .contenuto_dettagli {
+        text-align: center;
+    }
+    .contenuto_dettagli>div {
+        display: inline-block;
+        margin: 5px;
+        vertical-align: top;
+        text-align: left;
+        background: #f0f0f0;
+        padding: 7px 7px 7px 30px;
+        border-radius: 3px;
+    }
+    .contenuto_escursioni {
+        text-align: center;
+    }
+    .contenuto_servizi {
+        border-bottom: 1px solid #ddd;
+    }
+    /************ elenco rifugi su mappa ************/
+    #elenco_rifugi_mappa {
+        display: none;
+    }
+    .list_eventi {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    /************ header ************/
+    #header {
+        height: 60px;
+    }
+    #logo {
+        height: 60px;
+    }
+    #logo img {
+        height: 108px;
+    }
+    /************ slider principale e/o mappa ************/
+    #slider_mappa {
+        margin-top: 60px;
+    }
+    /************ contenuto impressum ************/
+    #impressum_left {
+        width: 96%;
+        float: none;
+        text-align: center;
+    }
+    #impressum_right {
+        width: 96%;
+        float: none;
+        text-align: center;
+    }
+    /*** foto ***/
+    .album {
+        max-width: 48%;
+    }
+    .service_right_tab_title {
+        display: block !important;
+        color: #cd372e;
+        font-weight: bold;
+        left: 0px !important;
+        margin-bottom: 5px;
+        text-align: center !important;
+        background: none!important;
+    }
+}
+
+@media screen and (max-width:700px) {
+    /************ header ************/
+    /*compare bottone mappa*/
+    #switch {
+        display: none;
+    }
+    #mappa_principale {
+        display: none;
+    }
+    #slider_principale {
+        position: relative;
+        height: 300px !important;
+    }
+    #link_mappa_fixed {
+        display: block;
+    }
+    .fixed #link_top {
+        display: block;
+    }
+    #header {
+        position: absolute;
+        margin-top: 67px;
+    }
+    #menu_e_buttons {
+        margin: 0;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        height: auto;
+        background: #beb7b7;
+        padding: 12px 0;
+    }
+    #menu_e_buttons img {
+        height: 30px;
+        margin-top: 4px;
+    }
+    .voce {
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+        margin: 0 5px;
+    }
+    .off_gallery img {
+        width: 155px;
+    }
+    /************ slider principale e/o mappa ************/
+    #slider_mappa {
+        margin-top: 125px;
+        background: #fff;
+    }
+    #mappa_rifugi {
+        margin: 0 auto;
+        width: 94%;
+    }
+    .swiper-slide {
+        height: auto !important;
+    }
+    /************ box dei quattro argomenti ************/
+    #boxes_container {
+        padding: 30px 0;
+    }
+    .box {
+        width: 80%;
+    }
+    .box_bottom {
+        background: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+    /************ contenuto ************/
+    .titolo {
+        font-size: 28px;
+    }
+    .sotto_titolo {
+        font-size: 20px;
+    }
+    /************ singolo rifugio ************/
+    #foto_rifugio>img {
+        width: 30%;
+    }
+    #foto_rifugio>img:nth-child(4),
+    #foto_rifugio>img:nth-child(5) {
+        display: none;
+        width: 30%;
+    }
+    /************ elenco rifugi nel content ************/
+    .link_rifugio {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    /*new*/
+    #footer_elenco_rifugi>div.box_elenco_rifugi a {
+        width: 90%;
+        margin: 5px auto;
+    }
+    /************ elenco escursioni nel content ************/
+    .link_escursione {
+        width: 90%;
+    }
+    /*** foto ***/
+    .album {
+        max-width: 90%;
+    }
+}
+
+@-webkit-keyframes effetto_mappa {
+    from {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes effetto_mappa {
+    from {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes effetto_rifugio_attivo {
+    from {
+        color: #5a5a53;
+        background: #fff;
+    }
+    to {
+        color: #fff;
+        background: #c6352d;
+    }
+}
+
+@keyframes effetto_rifugio_attivo {
+    from {
+        color: #5a5a53;
+        background: #fff;
+    }
+    to {
+        color: #fff;
+        background: #c6352d;
+    }
+}
+
+@-webkit-keyframes evidenzia_link_rifugio {
+    from {
+        border: 3px solid #fff;
+    }
+    30% {
+        border: 3px solid #ff0000;
+    }
+    to {
+        border: 3px solid #fff;
+    }
+}
+
+@keyframes evidenzia_link_rifugio {
+    from {
+        border: 3px solid #fff;
+    }
+    30% {
+        border: 3px solid #ff0000;
+    }
+    to {
+        border: 3px solid #fff;
+    }
+}
+
+.portale,
+a.portale:active,
+a.portale:hover,
+a.portale:visited {
+    color: #333333 !important;
+    text-decoration: none !important;
+    cursor: text !important;
+}
+
+.map-container {
+    width: 100%;
+    margin: 0 0 0 0;
+    border: 0;
+    margin-top: -42px;
+}
+
+.map-container iframe {
+    width: 100%;
+    display: block;
+    pointer-events: none;
+    position: relative;
+    /* IE needs a position other than static */
+}
+
+.map-container iframe.clicked {
+    pointer-events: auto;
+}

@@ -1,81 +1,74 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//IT">
-
 <html>
-<script type="text/javascript">
-  function blink() {
-    var blinks = document.getElementsByTagName('blink');
-    for (var i = blinks.length - 1; i >= 0; i--) {
-      var s = blinks[i];
-      s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
-    }
-    window.setTimeout(blink, 500);
-  }
-  if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
-  else if (window.addEventListener) window.addEventListener("load", blink, false);
-  else if (window.attachEvent) window.attachEvent("onload", blink);
-  else window.onload = blink;
-</script>
 
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta name="keywords" content="rifugio baroni brunone, rifugio baroni valbondione, rifugio baroni bergamo, valbondione, rifugio brunone, fiumenero, sentiero orobie" />
+<head>
+    <meta name="language" content="it" />
+    <meta http-equiv="language" content="it" />
+    <meta http-equiv="Content-Language" content="it" />
+    <meta name="author" content="Matteo Danelli" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+    <title>Rifugio Brunone</title>
+    <meta name="Keywords" content="Brunone, Mountain, Refuges, Orobie" />
+    <link rel="stylesheet" href="./css/style2.css" />
+</head>
 
-        <title>Rifugio Brunone - Sito ufficiale</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-53027708-1', 'auto');
-          ga('send', 'pageview');
-
-        </script>
-    </head>
-
-    <body>
-        <div class="page">
-            <div class="header">
-                <a href="index.html" id="logo">
-                    <img src="images/banner1.png" alt="">
+<body>
+    <div id="top"></div>
+    <a id="to_content" href="#contenuto"></a>
+    <div id="header">
+        <div id="lingue">
+            <div class="languages"><a href="./it/index.html" class="header-top-languages a lang">IT</a>
+                <a href="./en/index.html" class="header-top-languages a selcted">EN</a></div>
+        </div>
+        <div id="menu_e_buttons">
+            <div id="menu">
+                <a title="Rifugio Brunone" href="./it/index.html" class="voce"><img src="./images/hut_icon.png" />
+                    <font><span>Home</span> - Rifugio Brunone</font>
                 </a>
-                <ul>
-                    <li class="selected"><a href="index.html">Home</a>	
-                    </li>
-                    <li><a href="comeraggiungerci.html">Dove siamo</a>	
-                    </li>
-                    <li><a href="rifugio.html">Il rifugio</a>
-                    </li>
-                    <li><a href="immagini.html">Immagini</a>	
-                    </li>
-                    <li><a href="contatti.html">Contatti</a>	
-                    </li>
-                </ul>
-            </div>
-
-            <div class="body">
-                <br>
-                <div id="featured">
-                     <h3>Rifugio Brunone</h3>
-                    <p>Tra il pizzo del Diavolo di Tenda -il "Cervino bergamasco"- e l'incantevole pizzo Redorta, dal 1879 il rifugio Brunone offre l'ospitalità delle sue solide mura.</p>
-                    <input type="button" value="Avvisi" onClick="window.location.href='avvisi.jsp';">
-                </div>
-            </div>
-
-            <div class="footer">
-                <p>Copyright &copy; 2013-2016 Matteo Danelli, Massimiliano Tebaldi - All rights reserved</a>
-                </p>
-                <div class="connect">
-                    	<a href="http://www.facebook.com/sharer.php?u=http://www.rifugiobrunone.it" id="facebook">facebook</a> 
-                    	<a href="http://twitter.com/home?status=Visita%20il%20sito%20del%20Rifugio%20Brunone!%20www.rifugiobrunone.it" id="twitter">twitter</a> 
-                    	<a href="https://plus.google.com/share?url=www.rifugiobrunone.it" id="google">google+</a> 
-                </div>
-                <script type="text/javascript" src="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=rifugiobrunone"></script>
+                <a title="Map" href="./it/sentieri.html" class="voce"><img src="./images/map_icon.png" />
+                    <font><span>Tours</span> - Discover</font>
+                </a>
+                <a title="Photos" href="./it/immagini.html" class="voce"><img src="./images/photo_icon.png" />
+                    <font><span>Gallery</span> - Breathtaking views</font>
+                </a>
+                <a title="Contatti" href="./it/contatti.html" class="voce"><img src="./images/contacts_icon.png" />
+                    <font><span>Events</span> - Events</font>
+                </a>
             </div>
         </div>
-
-
-    </body>
+        <div id="logo"><img src="./images/banner1.png" /></div>
+    </div>
+    <!-- fine header-->
+    <div id="slider_mappa">
+        <div id="slider_principale">
+            <div class="swiper-wrapper">
+                <div style="background-image:url(./images/rifugio.jpg);" class="swiper-slide"><img src="./images/rifugio.jpg" /></div>
+            </div>
+        </div>
+    </div>
+    <div id="contenuto">
+        <div id="contenuto_top">
+            <h1 class="titolo">Rifugio Brunone</h1>
+            <h2 class="sotto_titolo"></h2>Tra il pizzo del Diavolo di Tenda -il "Cervino bergamasco"- e l'incantevole pizzo Redorta, dal 1879 il rifugio Brunone offre l'ospitalità delle sue solide mura. La prima capanna della Brunona risale al 1879, ricavata da una vecchia baita
+            di minatori che lavoravano nelle miniere di ferro, in prossimità del vicino Passo della Scaletta. Fu durante la gita sociale del CAI di Bergamo al Pizzo Redorta, il 29 luglio 1890, che i soci, costretti dal maltempo a ripararsi nella vecchia
+            capanna, si resero conto del suo stato di abbandono e decisero di sostituirla. <br/>Una decisione formalizzata nell’assemblea sociale del febbraio 1894; poche settimane dopo iniziarono i lavori. Completati in 3 mesi, portarono all’inaugurazione
+            del “Rifugio della Brunona”, come venne chiamato all’epoca, il 23 settembre 1894. Il progetto del 1894, dovuto all'Ingegnere Luigi Albani, fa sorgere il rifugio poco più in basso rispetto al capanno dei minatori. In seguito il rifugio venne
+            ristrutturato e dedicato, nel 1968 alla guida alpina Antonio Baroni. <br/>Attualmente il rifugio Brunone è rimasto nella collocazione del 1894, a quota 2297m su una meravigliosa terrazza erbosa, sotto il passo della Scaletta, con una visuale
+            che spazia dalla cima del Pizzo Redorta alla parete orientale del pizzo del Diavolo di Tenda.
+        </div>
+    </div>
+    <div id="boxes">
+        <div id="boxes_top"><img src="./images/box.png" /></div>
+    </div>
+    <div id="social">Segui la pagina ufficiale: <br/><br/>
+        <a href="https://www.facebook.com/rifugiobrunone/" target="_blank"><img src="./images/facebook.png" title="facebook" alt="facebook" /></a>
+    </div>
+    <div id="impressum"><span class="copyright">Copyright © Matteo Danelli, Massimiliano Tebaldi</span></div>
+</body>
 
 </html>

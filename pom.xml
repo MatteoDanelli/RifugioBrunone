@@ -3,15 +3,15 @@
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
-    <version>3a</version>
+    <version>2</version>
 
-    <groupId>com.rifugiobrunone</groupId>
+    <groupId>it.rifugiobrunone</groupId>
     <artifactId>rifugio-brunone</artifactId>
 
     <properties>
         <app.id>rifugio-brunone</app.id>
-        <app.version>3a</app.version>
-        <appengine.version>1.9.37</appengine.version>
+        <app.version>2</app.version>
+        <appengine.version>1.9.54</appengine.version>
         <gcloud.plugin.version>2.0.9.74.v20150814</gcloud.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>

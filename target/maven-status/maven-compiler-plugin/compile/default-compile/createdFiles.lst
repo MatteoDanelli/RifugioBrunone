@@ -1,4 +1,2 @@
-com/cyberteo/rifugiobrunone/EliminaAvvisiServlet.class
-com/cyberteo/rifugiobrunone/Rifugio_BrunoneServlet.class
-com/cyberteo/rifugiobrunone/LoginServlet.class
-com/cyberteo/rifugiobrunone/GestoreAvvisiServlet.class
+it/rifugiobrunone/EliminaAvvisiServlet.class
+it/rifugiobrunone/LoginServlet.class

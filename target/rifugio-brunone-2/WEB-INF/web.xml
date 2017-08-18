@@ -5,37 +5,22 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>Rifugio_Brunone</servlet-name>
-		<servlet-class>com.cyberteo.rifugiobrunone.Rifugio_BrunoneServlet</servlet-class>
-	</servlet>	
-	<servlet-mapping>
-		<servlet-name>Rifugio_Brunone</servlet-name>
-		<url-pattern>/rifugio_brunone</url-pattern>
-	</servlet-mapping>
-	<servlet>
 		<servlet-name>Login</servlet-name>
-		<servlet-class>com.cyberteo.rifugiobrunone.LoginServlet</servlet-class>
+		<servlet-class>it.rifugiobrunone.LoginServlet</servlet-class>
 	</servlet>	
 	<servlet-mapping>
 		<servlet-name>Login</servlet-name>
-		<url-pattern>/admin/login</url-pattern>
+		<url-pattern>/admin</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>GestoreAvvisi</servlet-name>
-		<servlet-class>com.cyberteo.rifugiobrunone.GestoreAvvisiServlet</servlet-class>
-	</servlet>	
-	<servlet-mapping>
-		<servlet-name>GestoreAvvisi</servlet-name>
-		<url-pattern>/admin/gestoreAvvisi</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>EliminaAvvisi</servlet-name>
-		<servlet-class>com.cyberteo.rifugiobrunone.EliminaAvvisiServlet</servlet-class>
-	</servlet>	
-	<servlet-mapping>
-		<servlet-name>EliminaAvvisi</servlet-name>
-		<url-pattern>/admin/eliminaAvvisi</url-pattern>
-	</servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EliminaAvvisi</servlet-name>
+        <servlet-class>it.rifugiobrunone.EliminaAvvisiServlet</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+        <servlet-name>EliminaAvvisi</servlet-name>
+        <url-pattern>/eliminaAvvisi</url-pattern>
+    </servlet-mapping>
 	
 	<security-constraint>
         <web-resource-collection>
@@ -46,9 +31,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
             <role-name>admin</role-name>
         </auth-constraint>
     </security-constraint>
-	
-	
+    
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
