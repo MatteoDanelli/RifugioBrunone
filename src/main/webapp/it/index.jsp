@@ -117,7 +117,8 @@
         <div id="social">Segui la pagina ufficiale: <br/><br/>
             <a href="https://www.facebook.com/rifugiobrunone/" target="_blank"><img src="../images/facebook.png" title="facebook" alt="facebook" /></a>
         </div>
-        <div id="impressum"><span class="copyright">Copyright © Matteo Danelli, Massimiliano Tebaldi</span></div>
+        <div id="impressum"><span class="copyright">Copyright © Matteo Danelli, Massimiliano Tebaldi</span>
+        <script type="text/javascript" src="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=rifugiobrunone"></script></div>
     </body>
 
 </html>

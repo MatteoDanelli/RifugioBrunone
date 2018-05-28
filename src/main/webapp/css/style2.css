@@ -115,6 +115,7 @@ a.generic_button:hover {
     top: 10px;
     text-transform: uppercase;
     z-index: 1003;
+    display: none
 }
 
 #lingue a {
@@ -435,7 +436,7 @@ a.generic_button:hover {
 }
 
 #slider_principale img {
-    width: 100%;
+    width: 65%;
     opacity: 0;
 }
 
@@ -508,6 +509,12 @@ a.generic_button:hover {
 
 #contenuto_top {
     padding: 0px 0 20px;
+}
+
+#contenuto_top p {
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
 }
 
 .titolo {

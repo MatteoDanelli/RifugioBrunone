@@ -65,7 +65,8 @@
         </div>
         <div id="contenuto">
             <div id="contenuto_top">
-                Tra il pizzo del Diavolo di Tenda -il "Cervino bergamasco"- e l'incantevole pizzo Redorta, dal 1879 il rifugio Brunone offre l'ospitalità delle sue solide mura. La prima capanna della Brunona risale al 1879, ricavata da una vecchia baita di minatori che
+                <p>Tra il pizzo del Diavolo di Tenda -il "Cervino bergamasco"- e l'incantevole pizzo Redorta, dal 1879 il rifugio Brunone offre l'ospitalità delle sue solide mura. </p>
+                <br/>La prima capanna della Brunona risale al 1879, ricavata da una vecchia baita di minatori che
                 lavoravano nelle miniere di ferro, in prossimità del vicino Passo della Scaletta. Fu durante la gita sociale del CAI di Bergamo al Pizzo Redorta, il 29 luglio 1890, che i soci, costretti
                 dal maltempo a ripararsi nella vecchia capanna, si resero conto del suo stato di abbandono e decisero di sostituirla. <br/>Una
                 decisione formalizzata nell’assemblea sociale del febbraio 1894; poche settimane dopo iniziarono i lavori. Completati in 3 mesi, portarono all’inaugurazione del “Rifugio della Brunona”, come
@@ -118,6 +119,9 @@
             <a href="https://www.facebook.com/rifugiobrunone/" target="_blank"><img src="./images/facebook.png" title="facebook" alt="facebook" /></a>
         </div>
         <div id="impressum"><span class="copyright">Copyright © Matteo Danelli, Massimiliano Tebaldi</span></div>
+        <!--Start Cookie Script-->
+        <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/a60ab72f9550a5b41cf3edec9ca67b40.js"></script>
+        <!--End Cookie Script-->
     </body>
 
 </html>
