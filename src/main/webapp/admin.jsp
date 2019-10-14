@@ -95,11 +95,6 @@
                 <h1 class="titolo">Lista avvisi</h1>
             </div>
             <form class="form-group" action="eliminaAvvisi" method="post">
-                <div class="form-group">
-                    <input class="form-control" type="checkbox" style="margin-right: 25px;" name="5715999101812736" />
-                    <label>Sentiero CAI 225</label>
-                    <br/>
-                </div>
                     <%
                     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
                     Query query = new Query("Notice").addSort("date", Query.SortDirection.DESCENDING);
